@@ -87,7 +87,7 @@ i{
 }
 
 #Language:hover{
-    animation: opacity1 linear .6s forwards;
+    animation: opacity1 linear .4s forwards;
 }
 
 @keyframes opacity1 {
@@ -98,11 +98,40 @@ i{
         opacity: 1;
     }
 }
+@keyframes PopUp {
+    from{
+        opacity: 0;
+        height: 0%;
+        color: none;
+    }
+    90%{
+        opacity: 1;
+        height: 600%;
+    }
+    100%{
+        
+        color: black;
+    }
+}
+@keyframes PopOut {
+    from{
+        display: block;
+        height: 100%;
+    }
+    50%{
+        height: 0%;
+    }
+    to{
+        display: none;
+    }
+}
 
 #Language:hover .Language__Popup{
     display: block !important;
     opacity: 1 !important;
+    animation: PopUp ease-in .3s;
 }
+
 
 .Language__Popup{
     width: 200px;
@@ -113,6 +142,60 @@ i{
     position: absolute; left: -90px; top: 26px;
     display: none;
     opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.ThongBao__PopUp{
+    position: absolute; top: 26px; left: -80%;
+    width: 400px;
+    background-color: white;
+    height: 300px;
+    color: black;
+    font-size: 16px;
+    display: none;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.08);
+    animation: PopUp ease-in .1s;
+}
+
+.ThongBao:hover .ThongBao__PopUp{
+    display: block !important;
+}
+
+.ThongBao:hover{
+    animation: opacity1 linear .4s forwards;
+}
+.ThongBao__PopUp::before{
+    content: "";
+    border-top: solid 15px transparent;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 15px #fff;
+    position: absolute; top: -26px; right: 10px;
+}
+
+.ThongBao__PopUp--Content:first-child{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ThongBao__PopUp--Content:last-child,
+.ThongBao__PopUp--Content:nth-child(2){
+    width: 50%;
+    height: 20%;
+    background-color: #f5f5f5;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ThongBao__PopUp--Content:last-child:hover,
+.ThongBao__PopUp--Content:nth-child(2):hover{
+    color: #ff6433;
+    background-color: rgb(241, 241, 241);
 }
 
 .Language__Popup::before{
@@ -135,3 +218,5 @@ i{
     color: #ff6433;
 }
 
+
+/* SearchBar */
