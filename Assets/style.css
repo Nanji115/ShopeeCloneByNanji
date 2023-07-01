@@ -12,7 +12,7 @@ body{
     transition: ease .3s;
 }
 
-i{
+.navBar i{
     font-size: 16px;
 }
 /* Header Section */
@@ -27,7 +27,8 @@ i{
 
 .Warper{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .navBar{
@@ -62,7 +63,8 @@ i{
     cursor: pointer;
 }
 
-.navBar a{
+.navBar a,
+.Search__Lower--Category a{
     text-decoration: none;
     padding: 0.25rem;
     color: white;
@@ -74,8 +76,6 @@ i{
     border-left: solid 3px hsla(0,0%,100%,.22);
 }
 
-
-
 .navBar__right:last-child{
     border-left: solid 1px #fff;
 }
@@ -84,6 +84,7 @@ i{
 
 #Language{
     position: relative;
+    z-index: 99999;
 }
 
 #Language:hover{
@@ -143,10 +144,15 @@ i{
     display: none;
     opacity: 0;
     transition: all 0.3s ease-in;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.08);
+}
+.ThongBao{
+    position: relative;
+    z-index: 99999;
 }
 
 .ThongBao__PopUp{
-    position: absolute; top: 26px; left: -80%;
+    position: absolute; top: 26px; right: 0;
     width: 400px;
     background-color: white;
     height: 300px;
@@ -155,6 +161,7 @@ i{
     display: none;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.08);
     animation: PopUp ease-in .1s;
+
 }
 
 .ThongBao:hover .ThongBao__PopUp{
@@ -220,3 +227,104 @@ i{
 
 
 /* SearchBar */
+.searchBar{
+    min-width: 1200px;
+    max-width: 1200px;
+    height: 86px;
+    font-size: .8125rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.searchBar__icon{
+    background-image: url("./ShopeeThumbnail.png");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    z-index: 3;
+    height:86px;
+    min-width: 193.5px;
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+
+.Search{
+    flex-grow: 3;
+    margin-left: 16px;
+    max-width: 763.5px;
+}
+
+.Search__Bar input{
+    padding: 12px 8px;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.Search__Bar i{
+    position: absolute;
+    font-size: 16px;
+    padding: 9px 20px;
+    transform: translateX(-103%) translateY(2.5px);
+    background-color: #ff6433;
+    z-index: 0;
+}
+
+.Search__Bar i:hover,
+.Search__Lower--Category:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.Search__Lower{
+    display: flex;
+    justify-content: center;
+}
+
+.Search__Lower--Category{
+    margin-top: 8px;
+    font-size: 12px;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.searchBar__cart{
+    position: relative;
+    min-width: 180px;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.searchBar__cart .Cart__PopUp{
+    position: absolute; top: 38px; right: 0;
+    transform: translateX(-25%);
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+    width: 350px;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.08);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: PopUp ease-in .1s;
+}
+.Cart__PopUp::before{
+    content: "";
+    border-top: solid 15px transparent;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 15px #fff;
+    position: absolute; top: -26px; right: 10px;
+}
+
+.searchBar__cart:hover .Cart__PopUp{
+    display: flex !important;
+}
