@@ -88,7 +88,7 @@ body{
 }
 
 #Language:hover{
-    animation: opacity1 linear .4s forwards;
+    animation: opacity1 linear .3s forwards;
 }
 
 @keyframes opacity1 {
@@ -130,7 +130,7 @@ body{
 #Language:hover .Language__Popup{
     display: block !important;
     opacity: 1 !important;
-    animation: PopUp ease-in .3s;
+    animation: PopUp ease-in .1s;
 }
 
 
@@ -328,3 +328,6 @@ body{
 .searchBar__cart:hover .Cart__PopUp{
     display: flex !important;
 }
+
+
+
