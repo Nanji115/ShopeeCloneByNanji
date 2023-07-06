@@ -101,19 +101,13 @@ body{
 }
 @keyframes PopUp {
     from{
-        opacity: 0;
-        height: 0%;
-        color: none;
+        transform: scale(0);
     }
-    90%{
-        opacity: 1;
-        height: 600%;
-    }
-    100%{
-        
-        color: black;
+    to{
+        transform: scale(1);
     }
 }
+
 @keyframes PopOut {
     from{
         display: block;
@@ -145,7 +139,17 @@ body{
     opacity: 0;
     transition: all 0.3s ease-in;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.08);
+    transform-origin: 70% top;
 }
+
+.Language__Popup::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 24px;
+    position: absolute; top: -10px; right: 0;
+}
+
 .ThongBao{
     position: relative;
     z-index: 99999;
@@ -161,7 +165,15 @@ body{
     display: none;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.08);
     animation: PopUp ease-in .1s;
+    transform-origin: 95% top;
+}
 
+.ThongBao__PopUp::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 24px;
+    position: absolute; top: -10px; right: 0;
 }
 
 .ThongBao:hover .ThongBao__PopUp{
@@ -323,6 +335,14 @@ body{
     border-right: solid 15px transparent;
     border-bottom: solid 15px #fff;
     position: absolute; top: -26px; right: 10px;
+}
+
+.Cart__PopUp::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 24px;
+    position: absolute; top: -10px; right: 0;
 }
 
 .searchBar__cart:hover .Cart__PopUp{
