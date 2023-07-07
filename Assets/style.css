@@ -12,6 +12,13 @@ body{
     transition: ease .3s;
 }
 
+.header,
+.upperbody,
+.Category{
+    display: flex;
+    justify-content: center;
+}
+
 .navBar i{
     font-size: 16px;
 }
@@ -23,9 +30,12 @@ body{
     background-image: linear-gradient(0, #f63, #f53e2d);
     position: fixed;
     color: #fff;
+    z-index: 9999;
 }
 
 .Warper{
+    min-width: 1200px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -311,6 +321,28 @@ body{
     z-index: 0;
 }
 
+.Search__Recent{
+    position: absolute; top: 90px;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    max-width: 763.5px;
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+
+.Search__Recent-item{
+    padding: 10px;
+}
+
+.Search__Recent-item:hover{
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
 .Search__Bar i{
     position: absolute;
     font-size: 16px;
@@ -383,4 +415,115 @@ body{
 }
 
 
+/* Body */
 
+/* Banners */
+.body{
+    transform: translateY(120px);
+}
+
+.upperbody{
+    padding-top: 26px;
+    width: 100%;
+    height: 380px;
+    background-color: #fff;
+}
+
+.upperbody__Banners{
+    display: flex;
+}
+
+.MainBanners{
+    width: 66.6%;
+}
+
+.AdditionalBanners{
+    margin-left: 4px;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MainBanners img{
+    height: 100%;
+}
+
+.MainBanners img,
+.AdditionalBanners img{
+    width: 100%;
+}
+
+
+.upperbody__Sales{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.Sales__btn{
+    text-align: center;
+    width: 100px;
+    font-size: 12px;
+    padding-top: 16px;
+    cursor: pointer;
+}
+
+.Sales__btn:hover{
+    transform: translateY(-4px);
+}
+
+.Sales__btn-icon img{
+    width: 45px;
+    height: 45px;
+}
+.Sales__btn-description{
+    margin-top: 4px;
+}
+
+/* Category */
+.Category{
+    margin-top: 20px;
+}
+.Category__Header{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    color: #888;
+}
+
+.Category__Body{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Category__Category{
+    border: solid 1px #f5f5f5;
+    background-color: #fff;
+    font-weight: 200;
+    font-size: 14px;
+    width: 120px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.Category__Category:hover{
+    border-color: #d4d4d4;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.08);
+}
+
+.Category__icon{
+    margin-top: 4px;
+    width: 75%;
+    height: 60%;
+}
+.Category__icon img{
+    width: 100%;
+    height: 100%;
+}
+.Category__description{ 
+    margin-top: 6px;
+}   
