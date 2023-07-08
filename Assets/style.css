@@ -556,10 +556,34 @@ body{
 }
 
 .Item{
+    border: solid 1px transparent;
     width: 190px;
     height: 282px;
     background-color: #fff;
     margin: 5px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.Item:hover{
+    border: solid 1px #f63;
+    transform: translateY(-2px);
+}
+
+.Item::after{
+    content: "Tìm Sản phẩm tương tự";
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    background-color: #f63;
+    width: 100%;
+    height: 10%;
+    color: white;
+}
+.Item:hover::after{
+    display: flex !important;
 }
 
 .Item__img{
@@ -598,7 +622,7 @@ body{
     display: block;
     border-top: solid 8px;
     border-bottom: solid 8px;
-    border-left: solid 20.9px;
+    border-left: solid 21px;
     border-right: solid 21px;
     border-color: transparent #ffd839 transparent #ffd839;
 }
@@ -607,30 +631,53 @@ body{
     position: absolute; bottom: 0; left: 0;
     display: flex;
 }
-.Item__Name{
 
+.Item__Info{
+    position: relative;
+    height: 94px;
+    padding: 8px;
+    width: 100%;
+}
+
+.Item__Name{
+    font-size: 12px;
 }
 
 .Item__Name--Sales{
-
+    display: flex;
+    margin-top: 4px;
 }
 
 .SaleGiam{
-
+    background-color: #f69113;
+    color: white;
+    padding: 2px;
+    font-size: 10px;
 }
 
 .FlashSale{
-
+    font-size: 10px;
+    margin-left: 4px;
+    border: 1px solid #ee4d2d;
+    color: #ee4d2d;
+    padding: 2px;
 }
 
 .Item__Price{
-
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 174px;
 }
 
 .Pricing{
-
+    color: #f63;
+    padding-bottom: 4px;
 }
 
 .SoldNumbers{
-
+    color: rgba(0,0,0,.54);
+    padding-bottom: 4px;
+    font-size: 12px;
 }
