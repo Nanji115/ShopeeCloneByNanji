@@ -556,7 +556,6 @@ body{
 }
 
 .Item{
-    border: solid 1px transparent;
     width: 190px;
     height: 282px;
     background-color: #fff;
@@ -566,8 +565,10 @@ body{
 }
 
 .Item:hover{
-    border: solid 1px #f63;
+    border: solid .001px #f63;
     transform: translateY(-2px);
+    z-index: 3;
+    outline: #f63;
 }
 
 .Item::after{
@@ -628,8 +629,15 @@ body{
 }
 
 .Sale__Specials{
-    position: absolute; bottom: 0; left: 0;
+    position: absolute; bottom: 1px; left: 0;
     display: flex;
+}
+
+.Img__Container{
+    width: 25%;
+}
+.Img__Container img{
+    height: 100%;
 }
 
 .Item__Info{
@@ -680,4 +688,20 @@ body{
     color: rgba(0,0,0,.54);
     padding-bottom: 4px;
     font-size: 12px;
+}
+
+.Favorite{
+    position: absolute; top: 5%; left: -4px;
+    font-size: 12px;
+    color: white;
+    background-color: #f25220;
+    padding: 0 10px;
+}
+
+.Favorite::before{
+    content: "";
+    z-index: -1;
+    position: absolute; bottom: -50%; left: -5px;
+    border: solid 6px #913113;
+    border-color: transparent #913113 transparent transparent;
 }
