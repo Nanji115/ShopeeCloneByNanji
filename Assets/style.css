@@ -774,6 +774,9 @@ body{
 }
 
 .QR__Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     padding: 4px;
     box-shadow: 0 2px 4px #cecece;
@@ -789,4 +792,7 @@ body{
     padding: 4px;
     background-color: #fff;
     box-shadow: 0 2px 4px #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
