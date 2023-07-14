@@ -678,6 +678,12 @@ body{
 
 .Item__Name{
     font-size: 12px;
+    line-height: 12px;
+    height: 24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .Item__Name--Sales{
