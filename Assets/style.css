@@ -305,18 +305,22 @@ body{
 }
 
 .searchBar__icon{
-    background-image: url("./ShopeeThumbnail.png");
-    background-position: center top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-origin: border-box;
     z-index: 3;
     height:86px;
-    min-width: 193.5px;
+    min-width: 150px;
+    max-width: 150px;
     font-size: 24px;
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 32px;
 }
 
+.searchBar__icon img{
+    height: 50%;
+    width: 100%;
+}
 
 .Search{
     flex-grow: 3;
@@ -677,9 +681,9 @@ body{
 }
 
 .Item__Name{
-    font-size: 12px;
-    line-height: 12px;
-    height: 24px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 36px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
